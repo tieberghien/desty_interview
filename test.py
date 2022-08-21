@@ -11,8 +11,16 @@ query_options = {
 factory = AbstractFactory()
 query_runner = factory.get_dao(query_runner_name)
 
-if query_runner:
-    result = query_runner.get_number(query_options)
+result = query_runner.get_number(query_options)
 
-    # the value of result would then be 2
-    assert result == 2
+# the value of result would then be 2
+assert result == 2
+
+query_runner_name = "mysql"
+query_runner = factory.get_dao(query_runner_name)
+result = query_runner.get_number(query_options)
+
+assert result == 3
+
+query_runner_name = "notimplemented"
+query_runner = factory.get_dao(query_runner_name)
