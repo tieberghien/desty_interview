@@ -3,8 +3,8 @@ from abstract_factory import AbstractFactory
 # the user selected these values in webpage
 query_runner_name = "bigquery"
 query_options = {
- "sql_statemant": "select count(*) as the_number from `orders`",
- "return_value": "the_number"
+    "sql_statemant": "select count(*) as the_number from `orders`",
+    "return_value": "the_number",
 }
 
 # then the application van use this code to query for a number
